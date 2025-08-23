@@ -1,10 +1,13 @@
 def solution(array):
-    answer = [0, 0]
-    big_array = answer[0]
-    
+    num = 0
+    idx = 0
+    answer = []
     for i in range(len(array)):
-        if array[i] > big_array:
-            big_array = array[i]
-            answer[0] = big_array
-            answer[1] = i
+        if array[i] > num:
+            num = array[i]
+            idx = i
+    answer.append(num)
+    answer.append(idx)
+
+
     return answer
